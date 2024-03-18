@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #97d4f0;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.header img{
+  width: 80px;
+}
+
+.input-container{
+  position: relative;
+}
+
+.input-container input{
+  margin-top: 1.5rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #ebf1f5;
+  height: 2rem;
+  border-radius: 25px;
+  padding: 0 1rem;
+  color: #67687d;
+}
+
+.add-btn{
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+  color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 100%;
+  background-color: #3d79b1;
+  cursor: pointer;
+}
+
+.separator{
+  height: 2px;
+  width: 100%;
+  background-color: #ebf1f5;
+  margin: 1rem 0;
+}
+
+.todo-section{
+  color: #7d7fa5;
+}
+
+.todo-section h2{
+  font-size: 1.2rem;
+}
+
+.todos-container{
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-card{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  border: solid 1px #ebf1f5;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.todo-card input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 3px solid #ebf1f5;
+  transform: translateY(-0.075em);
+  cursor: pointer;
+
+}
+
+.todo-card input[type="checkbox"]:checked{
+  background-color: #44ac6f;
+  clip-path: polygon(19% 46%, 0 65%, 50% 87%, 97% 16%, 80% 0%, 43% 62%);
+}
+
+.todo-card p{
+  color: #797989;
+  font-weight: bolder;
+}
+
+.todo-time{
+  position: absolute;
+  right: 15px;
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.todo-time span{
+  font-size: 0.8rem;
+}
+
+.todo-completed{
+  text-decoration: line-through;
+}
+
+#deleteBtn{
+  position: absolute;
+  font-weight: bold;
+  border-radius: 50%;
+  border: none;
+  right: 5px;
+  top: 13px;
+  background: rgb(201, 26, 26);
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.modal{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  border: none;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+#close-modal{
+  cursor: pointer;
+}
+
+.modal form{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.modal form label{
+  margin-bottom: 0.5rem;
+  color: #797989;
+  font-weight: bolder;
+}
+
+.modal form input{
+  margin-bottom: 0.5rem;
+  outline: none;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #ebf1f5;
+  height: 2rem;
+  padding: 0 1rem;
+  color: #67687d;
+}
+
+.modal form textarea{
+  outline: none;
+  border: none;
+  background-color: #ebf1f5;
+  margin-bottom: 1rem;
+  padding:1rem;
+  resize: none;
+}
+
+.modal form input[type="date"]{
+  width: 50%;
+}
+
+.modal form button{
+  background-color: transparent;
+  padding: 1rem 0;
+  font-size: 1rem;
+  border: none;
+  background-color: #3d79b1;
+  color: #fff;
+  cursor: pointer;
+}

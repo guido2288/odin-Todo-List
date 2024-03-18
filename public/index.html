@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Odin Todo List</title>
+</head>
+<body>
+  <main>
+    <div class="header">
+      <img src="./images/todo-high-resolution-logo-black-transparent.png" alt="logo">
+    </div>
+    <div class="input-container">
+      <input type="text" placeholder="Add item"  disabled>
+      <button class="add-btn" id="input-btn">+</button>
+    </div>
+
+    <div class="separator"></div>
+
+    <section class="todo-section">
+      <h2 >TO DO</h2>
+      <div class="todos-container" id="todos-container">
+        
+
+        <div class="todo-card">
+          <input type="checkbox">
+          <p>Buy cat food</p>
+          <div class="todo-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="fill: #7d7fa5;"><path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path><path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path></svg>
+            <span>Due Today</span>
+          </div>
+
+
+      </div>  
+    </section>
+
+    <dialog  class="modal" id="modal">
+      <div class="header">
+          <svg id="close-modal"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(201, 26, 26);"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
+      </div>
+      <form id="todo-form">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title-input" maxlength="25" required>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description-input" cols="30" rows="10" required></textarea>
+        <label for="">Maximum date:</label>  
+        <input type="date" id="date-input" min="2024-03-17" required>
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </dialog >
+  </main>
+
+  <script type="module" src="./bundle.js"></script>
+</body>
+</html>
